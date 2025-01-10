@@ -1,6 +1,4 @@
-# Day 1 (Part 1)
-
-### Usage
+# Usage
 
 ```
 cargo run -- ../real-input.txt
