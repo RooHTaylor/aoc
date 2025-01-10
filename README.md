@@ -9,7 +9,6 @@ However, I may choose to use other languages as time goes on.
 
 ### Completion
 
-|----|---------|----------|
 |Year|Languages|Completion|
 |----|---------|----------|
 |2015|Rust|0%|
