@@ -1,0 +1,223 @@
+use std::env;
+use std::process;
+use std::path::Path;
+use std::fs::File;
+use std::io::{self, BufRead};
+use std::collections::HashMap;
+
+#[derive(Debug)]
+enum Operations {
+    NOP,
+    NOT,
+    AND,
+    OR,
+    LSHIFT,
+    RSHIFT,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+struct Wire {
+    name: String,
+    value: u16,
+    set: bool,
+}
+
+#[derive(Debug)]
+struct Gate {
+    input1: String,
+    input2: Option<String>,
+    operation: Operations,
+    output: String,
+}
+
+fn main() {
+    // Open and read the provided file
+    let args: Vec<String> = env::args().collect();
+    if args.len() != 2 {
+        println!("Usage: {} <inputfilename>", args[0]);
+        process::exit(1);
+    }
+    let filename = Path::new(&args[1]);
+    let file = match File::open(&filename) {
+        Ok(fp) => fp,
+        Err(_) => {
+            println!("Failed to open file! {}", &args[1]);
+            process::exit(2);
+        }
+    };
+    let lines = io::BufReader::new(file).lines();
+
+    // Wires will contain a list of all the wires and their values. The key will
+    // be the wire name.
+    let mut wires: HashMap<String, Wire> = HashMap::new();
+    // As gates are discovered, they may not be able to be processed yet (i.e. the
+    // input wires are not set.) Push them into a Vec to be processed later, once
+    // more wires have been set.
+    let mut pending_gates: Vec<Gate> = Vec::new();
+
+    // Loop over lines from BufReader
+    for line in lines.map_while(Result::ok) {
+        // Skip empty lines
+        if line.is_empty(){
+            continue;
+        }
+    
+        // Parse the input to get the operation and the output
+        let line_parts: Vec<&str> = line.trim().split(" -> ").collect();
+        if line_parts.len() != 2 {
+            println!("Unable to parse line! {}", &line);
+            process::exit(3);
+        }
+
+        // Parse the operation parts and create the gate
+        let operation_parts: Vec<&str> = line_parts[0].split(" ").collect();
+        let gate: Gate = match operation_parts.len() {
+            1 => Gate {
+                input1: String::from(operation_parts[0]),
+                input2: None,
+                operation: Operations::NOP,
+                output: String::from(line_parts[1]),
+            },
+            2 => Gate {
+                input1: String::from(operation_parts[1]),
+                input2: None,
+                operation: Operations::NOT,
+                output: String::from(line_parts[1]),
+            },
+            3 => Gate {
+                input1: String::from(operation_parts[0]),
+                input2: Some(String::from(operation_parts[2])),
+                operation: match operation_parts[1] {
+                    "AND" => Operations::AND,
+                    "OR" => Operations::OR,
+                    "LSHIFT" => Operations::LSHIFT,
+                    "RSHIFT" => Operations::RSHIFT,
+                    _ => {
+                        println!("Invalid operation! {}", operation_parts[1]);
+                        process::exit(4);
+                    },
+                },
+                output: String::from(line_parts[1]),
+            },
+            _ => {
+                println!("Wrong number of operation params!");
+                process::exit(5);
+            },
+        };
+
+        // Load/create input1/output
+        let mut output: Wire = match wires.get(&gate.output) {
+            Some(o) => o.clone(),
+            None => {
+                let new_wire = Wire {
+                    name: String::from(&gate.output),
+                    value: 0,
+                    set: false,
+                };
+                wires.insert(String::from(&gate.output), new_wire);
+                wires.get(&gate.output).unwrap().clone()
+            },
+        };
+        // Output can only be set once
+        if output.set {
+            continue;
+        }
+
+        let mut input1: Wire = match wires.get(&gate.input1) {
+            Some(i) => i.clone(),
+            None => {
+                let new_wire = Wire {
+                    name: String::from(&gate.input1),
+                    value: match gate.input1.parse() {
+                        Ok(v) => v,
+                        Err(_) => 0,
+                    },
+                    set: match gate.input1.parse::<u16>() {
+                        Ok(_) => true,
+                        Err(_) => false,
+                    },
+                };
+                wires.insert(String::from(&gate.input1), new_wire);
+                wires.get(&gate.input1).unwrap().clone()
+            },
+        };
+
+        // Based on operation, load remaining wire and run operation to update 
+        // output wire. Push to pending_gates if inputs are not net.
+        let input2: Option<Wire> = match gate.operation {
+            Operations::OR |
+            Operations::AND | 
+            Operations::LSHIFT |
+            Operations::RSHIFT => {
+                // Load/Create input2 wire used for these gates
+                match wires.get(gate.input2.as_ref().unwrap()) {
+                    Some(i) => Some(i.clone()),
+                    None => {
+                        let new_wire = Wire {
+                            name: String::from(gate.input2.as_ref().unwrap()),
+                            value: 0,
+                            set: false,
+                        };
+                        wires.insert(String::from(gate.input2.as_ref().unwrap()), new_wire);
+                        Some(wires.get(gate.input2.as_ref().unwrap()).unwrap().clone())
+                    },
+                }
+            },
+            _ => None,
+        };
+
+        // If either input1 or input2 are not set, then we can't proceed with this gate. Push it to
+        // the pending queue to be processed later.
+        if !input1.set || (input2 != Option::None && !input2.as_ref().unwrap().set) {
+            pending_gates.push(gate);
+            continue;
+        }
+
+        // Both inputs must be set (or not used) if we're here, so we can process the gate.
+        match gate.operation {
+            Operations::NOP => {
+                output.value = input1.value;
+            },
+            Operations::NOT => {
+                output.value = !input1.value;
+            },
+            Operations::OR => {
+                output.value = input1.value | input2.unwrap().value;
+            },
+            Operations::AND => {
+                output.value = input1.value & input2.unwrap().value;
+            },
+            Operations::LSHIFT => {
+                output.value = input1.value << input2.unwrap().value;
+            },
+            Operations::RSHIFT => {
+                output.value = input1.value >> input2.unwrap().value;
+            },
+        }
+        output.set = true;
+        wires.insert(String::from(&output.name), output);
+
+        (wires, pending_gates) = process_pending_gates(wires, pending_gates);
+    }
+
+    println!("{:#?}", wires);
+}
+
+fn process_pending_gates(
+    wires: HashMap<String, Wire>,
+    pending_gates: Vec<Gate>
+) -> (HashMap<String, Wire>, Vec<Gate>) {
+    
+    // While we loop through pending_gates we keep track of the ones we want to remove. At the end
+    // we retain only the ones with true in the same spot in the keep vec
+    let keep: Vec<bool> = vec![true; pending_gates.len()];
+    let mut iter = keep.iter();
+
+    for g in pending_gates {
+
+    }
+
+    vec
+
+    return (wires, pending_gates)
+}
