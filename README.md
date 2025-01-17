@@ -11,7 +11,7 @@ However, I may choose to use other languages as time goes on.
 
 |Year|Languages|Completion|
 |----|---------|----------|
-|2015|Rust|28%|
+|2015|Rust|30%|
 |2016|||
 |2017|||
 |2018|||
