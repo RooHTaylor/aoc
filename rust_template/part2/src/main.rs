@@ -23,6 +23,11 @@ fn main() {
     let lines = io::BufReader::new(file).lines();
 
     for line in lines.map_while(Result::ok) {
+        // skip empty lines
+        if line.is_empty() {
+            continue;
+        }
+
         println!("{}", line);
     }
 }
