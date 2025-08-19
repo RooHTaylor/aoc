@@ -1,0 +1,5 @@
+[workspace]
+
+resolver = "3"
+
+members = ["2015/01/aoc-2015-01-part1", "shared"]
