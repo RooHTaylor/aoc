@@ -45,5 +45,9 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc-2015-04-part1"
+version = "0.1.0"
+
+[[package]]
 name = "shared"
 version = "0.1.0"
