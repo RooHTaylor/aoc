@@ -6,7 +6,7 @@ fn main() {
     
     let file_contents = load_input_file(&args[1]);
 
-    let num_leading_zeros = 5;
+    let num_leading_zeros = 6;
     let number = mine_advent_coins(&file_contents, num_leading_zeros);
 
     println!("The smallest number that produces a hash with {num_leading_zeros} leading zeros is {number}")
