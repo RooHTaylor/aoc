@@ -9,6 +9,8 @@ Now, a nice string is one with all of the following properties:
 
 How many strings are nice?
 
+The example-input.txt file should give the answer 1.
+
 ### Usage
 ```bash
 cargo run -- "<input file>"
