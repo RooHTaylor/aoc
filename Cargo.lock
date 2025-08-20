@@ -108,6 +108,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc-2015-07-part2"
+version = "0.1.0"
+dependencies = [
+ "shared",
+]
+
+[[package]]
 name = "md5"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

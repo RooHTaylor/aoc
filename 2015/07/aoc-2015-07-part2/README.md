@@ -6,7 +6,9 @@ The included instructions booklet describes how to connect the parts together: x
 
 Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
-The example-input.txt file should give the answer 123.
+Now, take the signal you got on wire a, override wire b to that signal, and reset the other wires (including wire a). What new signal is ultimately provided to wire a?
+
+The example-input.txt file should give the answer 97.
 
 ### Usage
 ```bash
