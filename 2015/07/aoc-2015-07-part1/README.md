@@ -6,7 +6,7 @@ The included instructions booklet describes how to connect the parts together: x
 
 Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
-The example-input.txt file should give the answer 998996.
+The example-input.txt file should give the answer 51.
 
 ### Usage
 ```bash

@@ -1,5 +1,8 @@
 use shared::*;
 use std::collections::HashMap;
+use std::collections::VecDeque;
+
+const DEBUG: bool = false;
 
 fn main() {
     let args = parse_args();
@@ -9,23 +12,195 @@ fn main() {
     build_computer(&file_contents);
 }
 
+// Build the circuit using the instructions
+// Create a list of wires and a queue of gates to process.
+// As we parse each instruction we will update values and then loop through all 
+// pending gates for any that may now be solved.
 fn build_computer(instructions: &str) {
-    let mut wires: HashMap<String, Wire> = HashMap::new();
-    let mut pending_gates: Vec<Gate> = Vec::new();
+    let mut wires: HashMap<String, Option<u16>> = HashMap::new();
+    let mut pending_gates: VecDeque<Gate> = VecDeque::new();
 
     for instruction in instructions.lines() {
-        // Parse all the values in one instruction. Solve the gate if possible
-        parse_instruction(&instruction, &mut wires, &mut pending_gates);
+        // Parse all the values in one instruction and generate the gate
+        parse_instruction(&instruction, &mut pending_gates);
         // loop through pending gates to try to solve
+        process_gate_queue(&mut wires, &mut pending_gates);
     }
 
-    println!("{wires:#?}");
+    // Flush the remaining gates after all instructions have been read.
+    while pending_gates.len() > 0 {
+        // loop through pending gates to try to solve
+        process_gate_queue(&mut wires, &mut pending_gates);
+    }
+
+    let a = match wires.get("a") {
+        Some(n) => n.unwrap(),
+        None => 0
+    };
+    println!("Wire a is {a}");
+}
+
+// Process the queue of pending gates for any that can be solved.
+fn process_gate_queue(
+    wires: &mut HashMap<String, Option<u16>>,
+    pending_gates: &mut VecDeque<Gate>
+) {
+
+    for _ in 0..pending_gates.len() {
+        if DEBUG { println!("{} gates in the queue", pending_gates.len())}
+        // Get the next gate to process
+        let gate = match pending_gates.pop_front() {
+            Some(g) => g,
+            None => {
+                return;
+            }
+        };
+
+        if DEBUG { println!("trying to solve gate:\n{:#?}", gate)}
+
+        let output = execute_gate(wires, &gate);
+        // If there was no output, we don't have the required inputs yet. Push the 
+        // gate into a queue to be processed later.
+        match output {
+            Some(_) => {
+                wires.insert(gate.output.to_string(), output);
+            },
+            None => {
+                pending_gates.push_back(gate);
+            }
+        }
+    }
+}
+
+// Execute a gate action
+fn execute_gate(
+    wires: &mut HashMap<String, Option<u16>>,
+    gate: &Gate
+) -> Option<u16> {
+    // Create or retreive the input
+    let input1 = retrieve_or_create_wire(wires, &gate.input1);
+    if DEBUG { println!("input 1:\n{:#?}", input1)}
+    // If we're expecting to have a second input, also create or retrieve it
+    let input2 = match gate.input2 {
+        Some(ref n) => {
+            retrieve_or_create_wire(wires, n)
+        },
+        None => None,
+    };
+    if DEBUG { println!("input 2:\n{:#?}", input2)}
+
+    // Generate our output by performing the gate action on our inputs
+    let output = match gate.action {
+        GateAction::DIRECT => {
+            match input1 {
+                Some(v) => {
+                    Some(v)
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+        GateAction::NOT => {
+            match input1 {
+                Some(v) => {
+                    Some(!v)
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+        GateAction::OR => {
+            match input1 {
+                Some(v1) => {
+                    match input2 {
+                        Some(v2) => {
+                            Some(v1 | v2)
+                        },
+                        None => {
+                            if DEBUG { println!("Can't solve because we don't have {:#?}", gate.input2); }
+                            None
+                        },
+                    }
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+        GateAction::AND => {
+            match input1 {
+                Some(v1) => {
+                    match input2 {
+                        Some(v2) => {
+                            Some(v1 & v2)
+                        },
+                        None => {
+                            if DEBUG { println!("Can't solve because we don't have {:#?}", gate.input2); }
+                            None
+                        },
+                    }
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+        GateAction::LSHIFT => {
+            match input1 {
+                Some(v1) => {
+                    match input2 {
+                        Some(v2) => {
+                            Some(v1 << v2)
+                        },
+                        None => {
+                            if DEBUG { println!("Can't solve because we don't have {:#?}", gate.input2); }
+                            None
+                        },
+                    }
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+        GateAction::RSHIFT => {
+            match input1 {
+                Some(v1) => {
+                    match input2 {
+                        Some(v2) => {
+                            Some(v1 >> v2)
+                        },
+                        None => {
+                            if DEBUG { println!("Can't solve because we don't have {:#?}", gate.input2); }
+                            None
+                        },
+                    }
+                },
+                None => {
+                    if DEBUG { println!("Can't solve because we don't have {}", gate.input1); }
+                    None
+                },
+            }
+        },
+    };
+
+    output
 }
 
 // Parse one line of instruction
 // Identify the inputs, output, and action. Create wires that don't already exist 
 // and execute the gate action if possible.
-fn parse_instruction(instruction: &str, wires: &mut HashMap<String, Wire>, pending_gates: &mut Vec<Gate>) {
+fn parse_instruction(
+    instruction: &str,
+    pending_gates: &mut VecDeque<Gate>
+) {
 
     // Initialize the gate
     let mut gate = Gate {
@@ -34,6 +209,8 @@ fn parse_instruction(instruction: &str, wires: &mut HashMap<String, Wire>, pendi
         input2: None,
         output: String::new(),
     };
+
+    if DEBUG { println!("processing: {instruction}")}
 
     // Split the instruction into the input side and the output side. Get the output
     // name.
@@ -44,6 +221,8 @@ fn parse_instruction(instruction: &str, wires: &mut HashMap<String, Wire>, pendi
     }
     gate.output.push_str(parts[1].trim());
 
+    //if DEBUG { println!("found output wire: {}", gate.output)}
+
     // Parse the input side.
     // Input side should be either
     //      1 -> i1
@@ -52,13 +231,16 @@ fn parse_instruction(instruction: &str, wires: &mut HashMap<String, Wire>, pendi
     let parts: Vec<&str> = parts[0].trim().split(" ").collect();
     // Assign the input names and action based on the number of input components
     match parts.len() {
+        // Only an input
         1 => {
             gate.input1.push_str(parts[0].trim());
         },
+        // Should be a NOT with an input
         2 if parts[0].starts_with("NOT") => {
             gate.action = GateAction::NOT;
             gate.input1.push_str(parts[1].trim());
         },
+        // Should be a dual input action
         3 => {
             gate.action = match parts[1].trim() {
                 "OR" => GateAction::OR,
@@ -78,125 +260,33 @@ fn parse_instruction(instruction: &str, wires: &mut HashMap<String, Wire>, pendi
             return;
         },
     }
-
-    // Create or retrieve input1
-    let input1 = retrieve_or_create_wire(wires, &gate.input1);
-    let input1_value: Option<u16> = if input1.value_set { Some(input1.value) } else { None };
-    let input2 = match gate.input2 {
-        Some(ref n) => {
-            Some(retrieve_or_create_wire(wires, n))
-        },
-        None => None,
-    };
-    let input2_value: Option<u16> = match input2 {
-        Some(w) => {
-            if w.value_set { Some(w.value) } else { None }
-        },
-        None => None,
-    };
-
-    let output_value = match gate.action {
-        GateAction::DIRECT => {
-            input1_value
-        },
-        GateAction::NOT => {
-            match input1_value {
-                Some(v) => {
-                    Some(!v)
-                },
-                None => None,
-            }
-        },
-        GateAction::OR => {
-            match input1_value {
-                Some(v1) => {
-                    match input2_value {
-                        Some(v2) => {
-                            Some(v1 | v2)
-                        },
-                        None => None,
-                    }
-                },
-                None => None,
-            }
-        },
-        GateAction::AND => {
-            match input1_value {
-                Some(v1) => {
-                    match input2_value {
-                        Some(v2) => {
-                            Some(v1 & v2)
-                        },
-                        None => None,
-                    }
-                },
-                None => None,
-            }
-        },
-        GateAction::LSHIFT => {
-            match input1_value {
-                Some(v1) => {
-                    match input2_value {
-                        Some(v2) => {
-                            Some(v1 << v2)
-                        },
-                        None => None,
-                    }
-                },
-                None => None,
-            }
-        },
-        GateAction::RSHIFT => {
-            match input1_value {
-                Some(v1) => {
-                    match input2_value {
-                        Some(v2) => {
-                            Some(v1 >> v2)
-                        },
-                        None => None,
-                    }
-                },
-                None => None,
-            }
-        },
-    };
-
-    match output_value {
-        Some(v) => {
-            let output = retrieve_or_create_wire(wires, &gate.output);
-            output.value = v;
-            output.value_set = true;
-        },
-        None => {
-            pending_gates.push(gate);
-        }
-    }
-
+    //if DEBUG { println!("found input wire: {}", gate.input1)}
+    //if DEBUG { println!("found input wire 2: {:#?}", gate.input2)}
+    //if DEBUG { println!("gate action: {:#?}", gate.action)}
+    
+    // Push the gate into the queue to be processes
+    pending_gates.push_back(gate);
 }
 
-// Retreive a Wire from the HashMap, or create it if it doesn't exist yet.
+// Retreive a Wire_value from the HashMap, or create it if it doesn't exist yet.
 // Return the reference to the new entry
 // Note we use .entry() here instead of .get() to avoid lifetime issues of creating
 // a temporary value that goes out of scope.
-fn retrieve_or_create_wire<'a>(wires: &'a mut HashMap<String, Wire>, name: &str) -> &'a mut Wire {
+fn retrieve_or_create_wire<'a>(
+    wires: &'a mut HashMap<String, Option<u16>>,
+    name: &str
+) -> Option<u16> {
     let wire= wires
         .entry(name.to_string())
         .or_insert(
-            Wire {
-                name: name.to_string(),
-                value_set: name.parse::<u16>().is_ok(),
-                value: if name.parse::<u16>().is_ok() { name.parse::<u16>().unwrap() } else { 0 },
+            if name.parse::<u16>().is_ok() {
+                Some(name.parse::<u16>().unwrap())
+            } else {
+                None
             }
-        ); 
+        );
 
-    wire
-}
-
-#[derive(Debug, Clone)]
-struct Wire {
-    name: String,
-    value_set: bool,
-    value: u16,
+    wire.clone()
 }
 
 #[derive(Debug, Copy, Clone)]
