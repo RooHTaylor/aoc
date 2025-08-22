@@ -6,6 +6,7 @@ use std::{
 };
 
 // Read the arguments and confirm an input file was provided
+// The function allows for an optional 3rd argument, --debug
 // 
 // # Exits - code 1
 //
@@ -13,9 +14,9 @@ use std::{
 pub fn parse_args() -> Vec<String> {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() != 2 {
-        eprintln!("Usage: {} <input file>", args[0]);
-        eprintln!("       OR cargo run -- <input file>");
+    if args.len() < 2 || (args.len() == 3 && &args[2] != "--debug") {
+        eprintln!("Usage: {} <input file> [--debug]", &args[0]);
+        eprintln!("       OR cargo run -- <input file> [--debug]");
         process::exit(1);
     }
 
