@@ -1,8 +1,5 @@
 use shared::*;
-use std::{
-    env,
-    process,
-};
+use std::process;
 
 fn main() {
     let args = parse_args_iterations();
