@@ -1,0 +1,24 @@
+Today, you set out on the task of perfecting your milk-dunking cookie recipe. All you have to do is find the right balance of ingredients.
+
+Your recipe leaves room for exactly 100 teaspoons of ingredients. You make a list of the remaining ingredients you could use to finish the recipe (your puzzle input) and their properties per teaspoon:
+
+    capacity (how well it helps the cookie absorb milk)
+    durability (how well it keeps the cookie intact when full of milk)
+    flavor (how tasty it makes the cookie)
+    texture (how it improves the feel of the cookie)
+    calories (how many calories it adds to the cookie)
+
+You can only measure ingredients in whole-teaspoon amounts accurately, and you have to be accurate so you can reproduce your results in the future. The total score of a cookie can be found by adding up each of the properties (negative totals become 0) and then multiplying together everything except calories.
+
+Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make?
+
+Your cookie recipe becomes wildly popular! Someone asks if you can make another recipe that has exactly 500 calories per cookie (so they can use it as a meal replacement). Keep the rest of your award-winning process the same (100 teaspoons, same ingredients, same scoring system).
+
+Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make with a calorie total of 500?
+
+The example-input.txt input should give the answer 57600000.
+
+### Usage
+```bash
+cargo run -- "<input file>" [--debug]
+```
