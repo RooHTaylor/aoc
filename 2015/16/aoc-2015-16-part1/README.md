@@ -30,3 +30,8 @@ perfumes: 1
 You make a list of the things you can remember about each Aunt Sue. Things missing from your list aren't zero - you simply don't remember the value.
 
 What is the number of the Sue that got you the gift?
+
+### Usage
+```bash
+cargo run -- "<input file>" [--debug]
+```
