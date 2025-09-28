@@ -248,6 +248,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc-2015-19-part1"
+version = "0.1.0"
+dependencies = [
+ "shared",
+]
+
+[[package]]
+name = "aoc-2015-19-part2"
+version = "0.1.0"
+dependencies = [
+ "md5",
+ "shared",
+]
+
+[[package]]
 name = "aoc-2015-part1"
 version = "0.1.0"
 dependencies = [
