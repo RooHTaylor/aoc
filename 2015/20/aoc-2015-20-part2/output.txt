@@ -1,0 +1,797 @@
+House 1
+Elf 1 is a divisor of house 1
+Elf 1 has now seen 1 houses.
+House 1 got 11 presents
+House 2
+Elf 1 is a divisor of house 2
+Elf 1 has now seen 2 houses.
+Inverse elf is 2
+Elf 2 has now seen 1 houses.
+House 2 got 33 presents
+House 3
+Elf 1 is a divisor of house 3
+Elf 1 has now seen 3 houses.
+Inverse elf is 3
+Elf 3 has now seen 1 houses.
+House 3 got 44 presents
+House 4
+Elf 1 is a divisor of house 4
+Elf 1 has now seen 4 houses.
+Inverse elf is 4
+Elf 4 has now seen 1 houses.
+Elf 2 is a divisor of house 4
+Elf 2 has now seen 2 houses.
+House 4 got 77 presents
+House 5
+Elf 1 is a divisor of house 5
+Elf 1 has now seen 5 houses.
+Inverse elf is 5
+Elf 5 has now seen 1 houses.
+House 5 got 66 presents
+House 6
+Elf 1 is a divisor of house 6
+Elf 1 has now seen 6 houses.
+Inverse elf is 6
+Elf 6 has now seen 1 houses.
+Elf 2 is a divisor of house 6
+Elf 2 has now seen 3 houses.
+Inverse elf is 3
+Elf 3 has now seen 2 houses.
+House 6 got 132 presents
+House 7
+Elf 1 is a divisor of house 7
+Elf 1 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 1 houses.
+House 7 got 88 presents
+House 8
+Elf 1 is a divisor of house 8
+Elf 1 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 1 houses.
+Elf 2 is a divisor of house 8
+Elf 2 has now seen 4 houses.
+Inverse elf is 4
+Elf 4 has now seen 2 houses.
+House 8 got 165 presents
+House 9
+Elf 1 is a divisor of house 9
+Elf 1 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 1 houses.
+Elf 3 is a divisor of house 9
+Elf 3 has now seen 3 houses.
+House 9 got 143 presents
+House 10
+Elf 1 is a divisor of house 10
+Elf 1 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 1 houses.
+Elf 2 is a divisor of house 10
+Elf 2 has now seen 5 houses.
+Inverse elf is 5
+Elf 5 has now seen 2 houses.
+House 10 got 198 presents
+House 11
+Elf 1 is a divisor of house 11
+Elf 1 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 1 houses.
+House 11 got 132 presents
+House 12
+Elf 1 is a divisor of house 12
+Elf 1 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 1 houses.
+Elf 2 is a divisor of house 12
+Elf 2 has now seen 6 houses.
+Inverse elf is 6
+Elf 6 has now seen 2 houses.
+Elf 3 is a divisor of house 12
+Elf 3 has now seen 4 houses.
+Inverse elf is 4
+Elf 4 has now seen 3 houses.
+House 12 got 308 presents
+House 13
+Elf 1 is a divisor of house 13
+Elf 1 has now seen 13 houses.
+Inverse elf is 13
+Elf 13 has now seen 1 houses.
+House 13 got 154 presents
+House 14
+Elf 1 is a divisor of house 14
+Elf 1 has now seen 14 houses.
+Inverse elf is 14
+Elf 14 has now seen 1 houses.
+Elf 2 is a divisor of house 14
+Elf 2 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 2 houses.
+House 14 got 264 presents
+House 15
+Elf 1 is a divisor of house 15
+Elf 1 has now seen 15 houses.
+Inverse elf is 15
+Elf 15 has now seen 1 houses.
+Elf 3 is a divisor of house 15
+Elf 3 has now seen 5 houses.
+Inverse elf is 5
+Elf 5 has now seen 3 houses.
+House 15 got 264 presents
+House 16
+Elf 1 is a divisor of house 16
+Elf 1 has now seen 16 houses.
+Inverse elf is 16
+Elf 16 has now seen 1 houses.
+Elf 2 is a divisor of house 16
+Elf 2 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 2 houses.
+Elf 4 is a divisor of house 16
+Elf 4 has now seen 4 houses.
+House 16 got 341 presents
+House 17
+Elf 1 is a divisor of house 17
+Elf 1 has now seen 17 houses.
+Inverse elf is 17
+Elf 17 has now seen 1 houses.
+House 17 got 198 presents
+House 18
+Elf 1 is a divisor of house 18
+Elf 1 has now seen 18 houses.
+Inverse elf is 18
+Elf 18 has now seen 1 houses.
+Elf 2 is a divisor of house 18
+Elf 2 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 2 houses.
+Elf 3 is a divisor of house 18
+Elf 3 has now seen 6 houses.
+Inverse elf is 6
+Elf 6 has now seen 3 houses.
+House 18 got 429 presents
+House 19
+Elf 1 is a divisor of house 19
+Elf 1 has now seen 19 houses.
+Inverse elf is 19
+Elf 19 has now seen 1 houses.
+House 19 got 220 presents
+House 20
+Elf 1 is a divisor of house 20
+Elf 1 has now seen 20 houses.
+Inverse elf is 20
+Elf 20 has now seen 1 houses.
+Elf 2 is a divisor of house 20
+Elf 2 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 2 houses.
+Elf 4 is a divisor of house 20
+Elf 4 has now seen 5 houses.
+Inverse elf is 5
+Elf 5 has now seen 4 houses.
+House 20 got 462 presents
+House 21
+Elf 1 is a divisor of house 21
+Elf 1 has now seen 21 houses.
+Inverse elf is 21
+Elf 21 has now seen 1 houses.
+Elf 3 is a divisor of house 21
+Elf 3 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 3 houses.
+House 21 got 352 presents
+House 22
+Elf 1 is a divisor of house 22
+Elf 1 has now seen 22 houses.
+Inverse elf is 22
+Elf 22 has now seen 1 houses.
+Elf 2 is a divisor of house 22
+Elf 2 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 2 houses.
+House 22 got 396 presents
+House 23
+Elf 1 is a divisor of house 23
+Elf 1 has now seen 23 houses.
+Inverse elf is 23
+Elf 23 has now seen 1 houses.
+House 23 got 264 presents
+House 24
+Elf 1 is a divisor of house 24
+Elf 1 has now seen 24 houses.
+Inverse elf is 24
+Elf 24 has now seen 1 houses.
+Elf 2 is a divisor of house 24
+Elf 2 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 2 houses.
+Elf 3 is a divisor of house 24
+Elf 3 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 3 houses.
+Elf 4 is a divisor of house 24
+Elf 4 has now seen 6 houses.
+Inverse elf is 6
+Elf 6 has now seen 4 houses.
+House 24 got 660 presents
+House 25
+Elf 1 is a divisor of house 25
+Elf 1 has now seen 25 houses.
+Inverse elf is 25
+Elf 25 has now seen 1 houses.
+Elf 5 is a divisor of house 25
+Elf 5 has now seen 5 houses.
+House 25 got 341 presents
+House 26
+Elf 1 is a divisor of house 26
+Elf 1 has now seen 26 houses.
+Inverse elf is 26
+Elf 26 has now seen 1 houses.
+Elf 2 is a divisor of house 26
+Elf 2 has now seen 13 houses.
+Inverse elf is 13
+Elf 13 has now seen 2 houses.
+House 26 got 462 presents
+House 27
+Elf 1 is a divisor of house 27
+Elf 1 has now seen 27 houses.
+Inverse elf is 27
+Elf 27 has now seen 1 houses.
+Elf 3 is a divisor of house 27
+Elf 3 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 3 houses.
+House 27 got 440 presents
+House 28
+Elf 1 is a divisor of house 28
+Elf 1 has now seen 28 houses.
+Inverse elf is 28
+Elf 28 has now seen 1 houses.
+Elf 2 is a divisor of house 28
+Elf 2 has now seen 14 houses.
+Inverse elf is 14
+Elf 14 has now seen 2 houses.
+Elf 4 is a divisor of house 28
+Elf 4 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 4 houses.
+House 28 got 616 presents
+House 29
+Elf 1 is a divisor of house 29
+Elf 1 has now seen 29 houses.
+Inverse elf is 29
+Elf 29 has now seen 1 houses.
+House 29 got 330 presents
+House 30
+Elf 1 is a divisor of house 30
+Elf 1 has now seen 30 houses.
+Inverse elf is 30
+Elf 30 has now seen 1 houses.
+Elf 2 is a divisor of house 30
+Elf 2 has now seen 15 houses.
+Inverse elf is 15
+Elf 15 has now seen 2 houses.
+Elf 3 is a divisor of house 30
+Elf 3 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 3 houses.
+Elf 5 is a divisor of house 30
+Elf 5 has now seen 6 houses.
+Inverse elf is 6
+Elf 6 has now seen 5 houses.
+House 30 got 792 presents
+House 31
+Elf 1 is a divisor of house 31
+Elf 1 has now seen 31 houses.
+Inverse elf is 31
+Elf 31 has now seen 1 houses.
+House 31 got 352 presents
+House 32
+Elf 1 is a divisor of house 32
+Elf 1 has now seen 32 houses.
+Inverse elf is 32
+Elf 32 has now seen 1 houses.
+Elf 2 is a divisor of house 32
+Elf 2 has now seen 16 houses.
+Inverse elf is 16
+Elf 16 has now seen 2 houses.
+Elf 4 is a divisor of house 32
+Elf 4 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 4 houses.
+House 32 got 693 presents
+House 33
+Elf 1 is a divisor of house 33
+Elf 1 has now seen 33 houses.
+Inverse elf is 33
+Elf 33 has now seen 1 houses.
+Elf 3 is a divisor of house 33
+Elf 3 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 3 houses.
+House 33 got 528 presents
+House 34
+Elf 1 is a divisor of house 34
+Elf 1 has now seen 34 houses.
+Inverse elf is 34
+Elf 34 has now seen 1 houses.
+Elf 2 is a divisor of house 34
+Elf 2 has now seen 17 houses.
+Inverse elf is 17
+Elf 17 has now seen 2 houses.
+House 34 got 594 presents
+House 35
+Elf 1 is a divisor of house 35
+Elf 1 has now seen 35 houses.
+Inverse elf is 35
+Elf 35 has now seen 1 houses.
+Elf 5 is a divisor of house 35
+Elf 5 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 5 houses.
+House 35 got 528 presents
+House 36
+Elf 1 is a divisor of house 36
+Elf 1 has now seen 36 houses.
+Inverse elf is 36
+Elf 36 has now seen 1 houses.
+Elf 2 is a divisor of house 36
+Elf 2 has now seen 18 houses.
+Inverse elf is 18
+Elf 18 has now seen 2 houses.
+Elf 3 is a divisor of house 36
+Elf 3 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 3 houses.
+Elf 4 is a divisor of house 36
+Elf 4 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 4 houses.
+Elf 6 is a divisor of house 36
+Elf 6 has now seen 6 houses.
+House 36 got 1001 presents
+House 37
+Elf 1 is a divisor of house 37
+Elf 1 has now seen 37 houses.
+Inverse elf is 37
+Elf 37 has now seen 1 houses.
+House 37 got 418 presents
+House 38
+Elf 1 is a divisor of house 38
+Elf 1 has now seen 38 houses.
+Inverse elf is 38
+Elf 38 has now seen 1 houses.
+Elf 2 is a divisor of house 38
+Elf 2 has now seen 19 houses.
+Inverse elf is 19
+Elf 19 has now seen 2 houses.
+House 38 got 660 presents
+House 39
+Elf 1 is a divisor of house 39
+Elf 1 has now seen 39 houses.
+Inverse elf is 39
+Elf 39 has now seen 1 houses.
+Elf 3 is a divisor of house 39
+Elf 3 has now seen 13 houses.
+Inverse elf is 13
+Elf 13 has now seen 3 houses.
+House 39 got 616 presents
+House 40
+Elf 1 is a divisor of house 40
+Elf 1 has now seen 40 houses.
+Inverse elf is 40
+Elf 40 has now seen 1 houses.
+Elf 2 is a divisor of house 40
+Elf 2 has now seen 20 houses.
+Inverse elf is 20
+Elf 20 has now seen 2 houses.
+Elf 4 is a divisor of house 40
+Elf 4 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 4 houses.
+Elf 5 is a divisor of house 40
+Elf 5 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 5 houses.
+House 40 got 990 presents
+House 41
+Elf 1 is a divisor of house 41
+Elf 1 has now seen 41 houses.
+Inverse elf is 41
+Elf 41 has now seen 1 houses.
+House 41 got 462 presents
+House 42
+Elf 1 is a divisor of house 42
+Elf 1 has now seen 42 houses.
+Inverse elf is 42
+Elf 42 has now seen 1 houses.
+Elf 2 is a divisor of house 42
+Elf 2 has now seen 21 houses.
+Inverse elf is 21
+Elf 21 has now seen 2 houses.
+Elf 3 is a divisor of house 42
+Elf 3 has now seen 14 houses.
+Inverse elf is 14
+Elf 14 has now seen 3 houses.
+Elf 6 is a divisor of house 42
+Elf 6 has now seen 7 houses.
+Inverse elf is 7
+Elf 7 has now seen 6 houses.
+House 42 got 1056 presents
+House 43
+Elf 1 is a divisor of house 43
+Elf 1 has now seen 43 houses.
+Inverse elf is 43
+Elf 43 has now seen 1 houses.
+House 43 got 484 presents
+House 44
+Elf 1 is a divisor of house 44
+Elf 1 has now seen 44 houses.
+Inverse elf is 44
+Elf 44 has now seen 1 houses.
+Elf 2 is a divisor of house 44
+Elf 2 has now seen 22 houses.
+Inverse elf is 22
+Elf 22 has now seen 2 houses.
+Elf 4 is a divisor of house 44
+Elf 4 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 4 houses.
+House 44 got 924 presents
+House 45
+Elf 1 is a divisor of house 45
+Elf 1 has now seen 45 houses.
+Inverse elf is 45
+Elf 45 has now seen 1 houses.
+Elf 3 is a divisor of house 45
+Elf 3 has now seen 15 houses.
+Inverse elf is 15
+Elf 15 has now seen 3 houses.
+Elf 5 is a divisor of house 45
+Elf 5 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 5 houses.
+House 45 got 858 presents
+House 46
+Elf 1 is a divisor of house 46
+Elf 1 has now seen 46 houses.
+Inverse elf is 46
+Elf 46 has now seen 1 houses.
+Elf 2 is a divisor of house 46
+Elf 2 has now seen 23 houses.
+Inverse elf is 23
+Elf 23 has now seen 2 houses.
+House 46 got 792 presents
+House 47
+Elf 1 is a divisor of house 47
+Elf 1 has now seen 47 houses.
+Inverse elf is 47
+Elf 47 has now seen 1 houses.
+House 47 got 528 presents
+House 48
+Elf 1 is a divisor of house 48
+Elf 1 has now seen 48 houses.
+Inverse elf is 48
+Elf 48 has now seen 1 houses.
+Elf 2 is a divisor of house 48
+Elf 2 has now seen 24 houses.
+Inverse elf is 24
+Elf 24 has now seen 2 houses.
+Elf 3 is a divisor of house 48
+Elf 3 has now seen 16 houses.
+Inverse elf is 16
+Elf 16 has now seen 3 houses.
+Elf 4 is a divisor of house 48
+Elf 4 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 4 houses.
+Elf 6 is a divisor of house 48
+Elf 6 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 6 houses.
+House 48 got 1364 presents
+House 49
+Elf 1 is a divisor of house 49
+Elf 1 has now seen 49 houses.
+Inverse elf is 49
+Elf 49 has now seen 1 houses.
+Elf 7 is a divisor of house 49
+Elf 7 has now seen 7 houses.
+House 49 got 627 presents
+House 50
+Elf 1 is a divisor of house 50
+Elf 1 has now seen 50 houses.
+Inverse elf is 50
+Elf 50 has now seen 1 houses.
+Elf 2 is a divisor of house 50
+Elf 2 has now seen 25 houses.
+Inverse elf is 25
+Elf 25 has now seen 2 houses.
+Elf 5 is a divisor of house 50
+Elf 5 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 5 houses.
+House 50 got 1023 presents
+House 51
+Elf 1 is a divisor of house 51
+Elf 1 has already visited 50 houses.
+Inverse elf is 51
+Elf 51 has now seen 1 houses.
+Elf 3 is a divisor of house 51
+Elf 3 has now seen 17 houses.
+Inverse elf is 17
+Elf 17 has now seen 3 houses.
+House 51 got 781 presents
+House 52
+Elf 1 is a divisor of house 52
+Elf 1 has already visited 50 houses.
+Inverse elf is 52
+Elf 52 has now seen 1 houses.
+Elf 2 is a divisor of house 52
+Elf 2 has now seen 26 houses.
+Inverse elf is 26
+Elf 26 has now seen 2 houses.
+Elf 4 is a divisor of house 52
+Elf 4 has now seen 13 houses.
+Inverse elf is 13
+Elf 13 has now seen 4 houses.
+House 52 got 1067 presents
+House 53
+Elf 1 is a divisor of house 53
+Elf 1 has already visited 50 houses.
+Inverse elf is 53
+Elf 53 has now seen 1 houses.
+House 53 got 583 presents
+House 54
+Elf 1 is a divisor of house 54
+Elf 1 has already visited 50 houses.
+Inverse elf is 54
+Elf 54 has now seen 1 houses.
+Elf 2 is a divisor of house 54
+Elf 2 has now seen 27 houses.
+Inverse elf is 27
+Elf 27 has now seen 2 houses.
+Elf 3 is a divisor of house 54
+Elf 3 has now seen 18 houses.
+Inverse elf is 18
+Elf 18 has now seen 3 houses.
+Elf 6 is a divisor of house 54
+Elf 6 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 6 houses.
+House 54 got 1309 presents
+House 55
+Elf 1 is a divisor of house 55
+Elf 1 has already visited 50 houses.
+Inverse elf is 55
+Elf 55 has now seen 1 houses.
+Elf 5 is a divisor of house 55
+Elf 5 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 5 houses.
+House 55 got 781 presents
+House 56
+Elf 1 is a divisor of house 56
+Elf 1 has already visited 50 houses.
+Inverse elf is 56
+Elf 56 has now seen 1 houses.
+Elf 2 is a divisor of house 56
+Elf 2 has now seen 28 houses.
+Inverse elf is 28
+Elf 28 has now seen 2 houses.
+Elf 4 is a divisor of house 56
+Elf 4 has now seen 14 houses.
+Inverse elf is 14
+Elf 14 has now seen 4 houses.
+Elf 7 is a divisor of house 56
+Elf 7 has now seen 8 houses.
+Inverse elf is 8
+Elf 8 has now seen 7 houses.
+House 56 got 1309 presents
+House 57
+Elf 1 is a divisor of house 57
+Elf 1 has already visited 50 houses.
+Inverse elf is 57
+Elf 57 has now seen 1 houses.
+Elf 3 is a divisor of house 57
+Elf 3 has now seen 19 houses.
+Inverse elf is 19
+Elf 19 has now seen 3 houses.
+House 57 got 869 presents
+House 58
+Elf 1 is a divisor of house 58
+Elf 1 has already visited 50 houses.
+Inverse elf is 58
+Elf 58 has now seen 1 houses.
+Elf 2 is a divisor of house 58
+Elf 2 has now seen 29 houses.
+Inverse elf is 29
+Elf 29 has now seen 2 houses.
+House 58 got 979 presents
+House 59
+Elf 1 is a divisor of house 59
+Elf 1 has already visited 50 houses.
+Inverse elf is 59
+Elf 59 has now seen 1 houses.
+House 59 got 649 presents
+House 60
+Elf 1 is a divisor of house 60
+Elf 1 has already visited 50 houses.
+Inverse elf is 60
+Elf 60 has now seen 1 houses.
+Elf 2 is a divisor of house 60
+Elf 2 has now seen 30 houses.
+Inverse elf is 30
+Elf 30 has now seen 2 houses.
+Elf 3 is a divisor of house 60
+Elf 3 has now seen 20 houses.
+Inverse elf is 20
+Elf 20 has now seen 3 houses.
+Elf 4 is a divisor of house 60
+Elf 4 has now seen 15 houses.
+Inverse elf is 15
+Elf 15 has now seen 4 houses.
+Elf 5 is a divisor of house 60
+Elf 5 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 5 houses.
+Elf 6 is a divisor of house 60
+Elf 6 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 6 houses.
+House 60 got 1837 presents
+House 61
+Elf 1 is a divisor of house 61
+Elf 1 has already visited 50 houses.
+Inverse elf is 61
+Elf 61 has now seen 1 houses.
+House 61 got 671 presents
+House 62
+Elf 1 is a divisor of house 62
+Elf 1 has already visited 50 houses.
+Inverse elf is 62
+Elf 62 has now seen 1 houses.
+Elf 2 is a divisor of house 62
+Elf 2 has now seen 31 houses.
+Inverse elf is 31
+Elf 31 has now seen 2 houses.
+House 62 got 1045 presents
+House 63
+Elf 1 is a divisor of house 63
+Elf 1 has already visited 50 houses.
+Inverse elf is 63
+Elf 63 has now seen 1 houses.
+Elf 3 is a divisor of house 63
+Elf 3 has now seen 21 houses.
+Inverse elf is 21
+Elf 21 has now seen 3 houses.
+Elf 7 is a divisor of house 63
+Elf 7 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 7 houses.
+House 63 got 1133 presents
+House 64
+Elf 1 is a divisor of house 64
+Elf 1 has already visited 50 houses.
+Inverse elf is 64
+Elf 64 has now seen 1 houses.
+Elf 2 is a divisor of house 64
+Elf 2 has now seen 32 houses.
+Inverse elf is 32
+Elf 32 has now seen 2 houses.
+Elf 4 is a divisor of house 64
+Elf 4 has now seen 16 houses.
+Inverse elf is 16
+Elf 16 has now seen 4 houses.
+Elf 8 is a divisor of house 64
+Elf 8 has now seen 8 houses.
+House 64 got 1386 presents
+House 65
+Elf 1 is a divisor of house 65
+Elf 1 has already visited 50 houses.
+Inverse elf is 65
+Elf 65 has now seen 1 houses.
+Elf 5 is a divisor of house 65
+Elf 5 has now seen 13 houses.
+Inverse elf is 13
+Elf 13 has now seen 5 houses.
+House 65 got 913 presents
+House 66
+Elf 1 is a divisor of house 66
+Elf 1 has already visited 50 houses.
+Inverse elf is 66
+Elf 66 has now seen 1 houses.
+Elf 2 is a divisor of house 66
+Elf 2 has now seen 33 houses.
+Inverse elf is 33
+Elf 33 has now seen 2 houses.
+Elf 3 is a divisor of house 66
+Elf 3 has now seen 22 houses.
+Inverse elf is 22
+Elf 22 has now seen 3 houses.
+Elf 6 is a divisor of house 66
+Elf 6 has now seen 11 houses.
+Inverse elf is 11
+Elf 11 has now seen 6 houses.
+House 66 got 1573 presents
+House 67
+Elf 1 is a divisor of house 67
+Elf 1 has already visited 50 houses.
+Inverse elf is 67
+Elf 67 has now seen 1 houses.
+House 67 got 737 presents
+House 68
+Elf 1 is a divisor of house 68
+Elf 1 has already visited 50 houses.
+Inverse elf is 68
+Elf 68 has now seen 1 houses.
+Elf 2 is a divisor of house 68
+Elf 2 has now seen 34 houses.
+Inverse elf is 34
+Elf 34 has now seen 2 houses.
+Elf 4 is a divisor of house 68
+Elf 4 has now seen 17 houses.
+Inverse elf is 17
+Elf 17 has now seen 4 houses.
+House 68 got 1375 presents
+House 69
+Elf 1 is a divisor of house 69
+Elf 1 has already visited 50 houses.
+Inverse elf is 69
+Elf 69 has now seen 1 houses.
+Elf 3 is a divisor of house 69
+Elf 3 has now seen 23 houses.
+Inverse elf is 23
+Elf 23 has now seen 3 houses.
+House 69 got 1045 presents
+House 70
+Elf 1 is a divisor of house 70
+Elf 1 has already visited 50 houses.
+Inverse elf is 70
+Elf 70 has now seen 1 houses.
+Elf 2 is a divisor of house 70
+Elf 2 has now seen 35 houses.
+Inverse elf is 35
+Elf 35 has now seen 2 houses.
+Elf 5 is a divisor of house 70
+Elf 5 has now seen 14 houses.
+Inverse elf is 14
+Elf 14 has now seen 5 houses.
+Elf 7 is a divisor of house 70
+Elf 7 has now seen 10 houses.
+Inverse elf is 10
+Elf 10 has now seen 7 houses.
+House 70 got 1573 presents
+House 71
+Elf 1 is a divisor of house 71
+Elf 1 has already visited 50 houses.
+Inverse elf is 71
+Elf 71 has now seen 1 houses.
+House 71 got 781 presents
+House 72
+Elf 1 is a divisor of house 72
+Elf 1 has already visited 50 houses.
+Inverse elf is 72
+Elf 72 has now seen 1 houses.
+Elf 2 is a divisor of house 72
+Elf 2 has now seen 36 houses.
+Inverse elf is 36
+Elf 36 has now seen 2 houses.
+Elf 3 is a divisor of house 72
+Elf 3 has now seen 24 houses.
+Inverse elf is 24
+Elf 24 has now seen 3 houses.
+Elf 4 is a divisor of house 72
+Elf 4 has now seen 18 houses.
+Inverse elf is 18
+Elf 18 has now seen 4 houses.
+Elf 6 is a divisor of house 72
+Elf 6 has now seen 12 houses.
+Inverse elf is 12
+Elf 12 has now seen 6 houses.
+Elf 8 is a divisor of house 72
+Elf 8 has now seen 9 houses.
+Inverse elf is 9
+Elf 9 has now seen 8 houses.
+House 72 got 2134 presents
+The lowest house number to get at least 2000 presents is: 72
