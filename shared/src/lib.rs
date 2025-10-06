@@ -30,7 +30,7 @@ pub fn parse_args() -> Vec<String> {
 //
 // This function will exit the process if the file does not exist or is not a file
 pub fn load_input_file(filename: &str) -> String {
-    let filepath= Path::new(&filename);
+    let filepath= Path::new(filename);
 
     if !filepath.exists() || !filepath.is_file() {
         eprintln!("The input file you provided either doesn't exist, or isn't a file.");
