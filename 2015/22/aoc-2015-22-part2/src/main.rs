@@ -2,7 +2,7 @@ use shared::*;
 use clap::Parser;
 use std::process;
 
-/// Advent Of Code 2015 Day 22 Part 1 solution
+/// Advent Of Code 2015 Day 22 Part 2 solution
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Args {
