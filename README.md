@@ -16,7 +16,7 @@ The old format was coppied to 2025-format and the main branch was reset.
 |Year|Languages|Completion|Notes|
 |----|---------|----------|-----|
 |2015|Rust|100%|See 2025-format branch for initial completion.|
-|2016|Rust|4%||
+|2016|Rust|8%||
 |2017||||
 |2018||||
 |2019||||
