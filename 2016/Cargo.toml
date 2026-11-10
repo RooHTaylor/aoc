@@ -1,0 +1,8 @@
+[package]
+name = "aoc2016"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aoc_common = { path = "../common" }
+clap = { version = "*", features = ["derive"] }
