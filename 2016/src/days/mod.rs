@@ -1,6 +1,7 @@
 use aoc_common::Options;
 
 mod day01;
+mod day02;
 
 pub type Solver = fn(&str, &Options) -> Result<String, String>;
 
@@ -8,6 +9,8 @@ pub fn solver(day: u8, part: u8) -> Option<Solver> {
     match (day, part) {
         (1, 1) => Some(day01::part1),
         (1, 2) => Some(day01::part2),
+        (2, 1) => Some(day02::part1),
+        (2, 2) => Some(day02::part2),
         _ => None,
     }
 }
