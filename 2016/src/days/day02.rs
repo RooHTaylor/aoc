@@ -70,7 +70,7 @@ fn parse_instructions(input: &str) -> Result<Vec<Vec<char>>, String> {
 }
 
 
-pub fn part1(input: &str, _opts: & Options) -> Result<String, String> {
+pub fn part1(input: &str, _opts: &Options) -> Result<String, String> {
     let buttons = parse_instructions(input)?;
     let mut keypad = Keypad::new();
 
@@ -154,7 +154,7 @@ impl KeypadP2 {
 }
 
 
-pub fn part2(input: &str, _opts: & Options) -> Result<String, String> {
+pub fn part2(input: &str, _opts: &Options) -> Result<String, String> {
     let buttons = parse_instructions(input)?;
     let mut keypad = KeypadP2::new();
 
