@@ -5,6 +5,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 pub type Solver = fn(&str, &Options) -> Result<String, String>;
 
@@ -20,6 +21,8 @@ pub fn solver(day: u8, part: u8) -> Option<Solver> {
         (4, 2) => Some(day04::part2),
         (5, 1) => Some(day05::part1),
         (5, 2) => Some(day05::part2),
+        (6, 1) => Some(day06::part1),
+        (6, 2) => Some(day06::part2),
         _ => None,
     }
 }
