@@ -242,15 +242,15 @@ mod tests {
     #[test]
     fn part1_example() {
         assert_eq!(
-            part1(EXAMPLE101, &Options{ debug: false, iterations: None }).unwrap(),
+            part1(EXAMPLE101, &Options::default()).unwrap(),
             "5"
         );
         assert_eq!(
-            part1(EXAMPLE102, &Options{ debug: false, iterations: None }).unwrap(),
+            part1(EXAMPLE102, &Options::default()).unwrap(),
             "2"
         );
         assert_eq!(
-            part1(EXAMPLE103, &Options{ debug: false, iterations: None }).unwrap(),
+            part1(EXAMPLE103, &Options::default()).unwrap(),
             "12"
         );
     }
@@ -258,7 +258,7 @@ mod tests {
     #[test]
     fn part2_example() {
         assert_eq!(
-            part2(EXAMPLE201, &Options{ debug: false, iterations: None }).unwrap(),
+            part2(EXAMPLE201, &Options::default()).unwrap(),
             "4"
         );
     }

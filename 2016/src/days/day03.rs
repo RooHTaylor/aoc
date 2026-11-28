@@ -146,7 +146,7 @@ mod tests {
     #[test]
     fn part1_example() {
         assert_eq!(
-            part1(EXAMPLE101, &Options{ debug: false, iterations: None }).unwrap(),
+            part1(EXAMPLE101, &Options::default()).unwrap(),
             "0"
         );
     }
@@ -154,7 +154,7 @@ mod tests {
     #[test]
     fn part2_example() {
         assert_eq!(
-            part2(EXAMPLE201, &Options{ debug: false, iterations: None }).unwrap(),
+            part2(EXAMPLE201, &Options::default()).unwrap(),
             "6"
         );
     }

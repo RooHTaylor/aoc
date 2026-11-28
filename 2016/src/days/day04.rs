@@ -164,7 +164,7 @@ mod tests {
     #[test]
     fn part1_example() {
         assert_eq!(
-            part1(EXAMPLE101, &Options{ debug: false, iterations: None }).unwrap(),
+            part1(EXAMPLE101, &Options::default()).unwrap(),
             "1514"
         );
     }

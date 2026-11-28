@@ -90,7 +90,7 @@ mod tests {
     #[test]
     fn part1_example() {
         assert_eq!(
-            part1(EXAMPLE101, &Options{ debug: false, iterations: None })
+            part1(EXAMPLE101, &Options::default())
                 .unwrap(),
             "easter"
         );
@@ -99,7 +99,7 @@ mod tests {
     #[test]
     fn part2_example() {
         assert_eq!(
-            part1(EXAMPLE101, &Options{ debug: false, iterations: None })
+            part2(EXAMPLE101, &Options::default())
                 .unwrap(),
             "advent"
         );
